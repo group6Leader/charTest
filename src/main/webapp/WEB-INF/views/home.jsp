@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Hello world! 
-	12345œ</h1>
+	0000000œ</h1>
 
 	<P>The time on the server is ${serverTime}.</P>
 </body>
