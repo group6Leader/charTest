@@ -9,6 +9,7 @@
 	Hello world!
 	1.조민제 
 	2.commit
+	3.update
 </h1>
 
 	<P>The time on the server is ${serverTime}.</P>
