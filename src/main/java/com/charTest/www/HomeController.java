@@ -24,16 +24,60 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";
 	}
 	
+	@RequestMapping(value = "echo-go" , method = RequestMethod.GET)
+	public String goEcho(Locale locale, Model model){
+		
+		logger.info("echo go");
+		return "echo-ws";
+	}
+	
+	@RequestMapping(value = "chat-go" , method = RequestMethod.GET)
+	public String goChat(Locale locale, Model model){
+	
+		logger.info("chat go");
+		
+		return "chat-ws";
+	}
+	@RequestMapping(value ="echo-sockjs-go" , method = RequestMethod.GET)
+	public String goEchojs(Locale locale, Model model){
+		
+		logger.info("echo-sockjs-go");
+		
+		return "echo-sockjs";
+	}
+	
+	@RequestMapping(value ="chat-sockjs-go" , method = RequestMethod.GET)
+	public String goChatjs(Locale locale, Model model){
+		
+		logger.info("chat-sockjs-go");
+		
+		
+		return "chat-sockjs";
+	}
+	
+	@RequestMapping(value ="webRtc-1-go" , method = RequestMethod.GET)
+	public String gowebRtc1(Locale locale , Model model){
+		
+		logger.info("webRtc-1");
+		
+		
+		return "webRtc-1";
+	}
+	
+	@RequestMapping(value ="webRtc-2-go" , method = RequestMethod.GET)
+	public String gowebRtc2(Locale locale , Model model){
+		
+		logger.info("webRtc-2");
+		
+		
+		return "webRtc-2";
+	}
+	
 }
+
